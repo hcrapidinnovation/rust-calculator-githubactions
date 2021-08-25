@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: curl
+      run: curl checkip.amazonaws.com
     - name: Build
       run: cargo build --verbose
     - name: Run tests
